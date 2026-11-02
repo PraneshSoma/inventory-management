@@ -6,6 +6,7 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -112,6 +113,14 @@ export default {
     onTimeDelivery: 'On-Time Delivery',
     itemsCount: '{count} items',
     quantity: 'Qty',
+    submittedOrders: {
+      title: 'Submitted Orders',
+      empty: 'No restocking orders submitted yet',
+      loadError: 'Failed to load submitted orders',
+      totalCost: 'Total Cost',
+      leadTime: 'Lead Time',
+      days: '{count} days'
+    },
     table: {
       orderNumber: 'Order Number',
       orderId: 'Order ID',
@@ -188,6 +197,38 @@ export default {
     }
   },
 
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Set a budget and restock items with growing demand',
+    budget: 'Available Budget',
+    recommendations: 'Recommended Items',
+    noCandidates: 'No items need restocking right now',
+    selectedTotal: 'Selected Total',
+    remaining: 'Remaining',
+    overBudget: 'Over budget',
+    leadTime: 'Lead Time',
+    days: '{count} days',
+    itemsSelected: '{count} items selected',
+    placeOrder: 'Place Order',
+    placing: 'Placing Order...',
+    orderPlaced: 'Order {number} submitted. Expected delivery in {days} days.',
+    viewOrders: 'View in Orders',
+    loadError: 'Failed to load restocking recommendations',
+    submitError: 'Failed to place order',
+    table: {
+      select: 'Select',
+      sku: 'SKU',
+      itemName: 'Item Name',
+      category: 'Category',
+      trend: 'Trend',
+      quantity: 'Quantity',
+      unitCost: 'Unit Cost',
+      lineCost: 'Line Cost',
+      leadTime: 'Lead Time'
+    }
+  },
+
   // Filters
   filters: {
     timePeriod: 'Time Period',
@@ -204,6 +245,7 @@ export default {
     shipped: 'Shipped',
     processing: 'Processing',
     backordered: 'Backordered',
+    submitted: 'Submitted',
     inStock: 'In Stock',
     lowStock: 'Low Stock',
     adequate: 'Adequate'

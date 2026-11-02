@@ -11,7 +11,17 @@ from fastapi.testclient import TestClient
 server_path = Path(__file__).parent.parent.parent / "server"
 sys.path.insert(0, str(server_path))
 
+import main
 from main import app
+
+
+@pytest.fixture(autouse=True)
+def reset_restock_orders():
+    """Clear submitted restocking orders so tests stay independent."""
+    # Slice assignment keeps the list object that the endpoints reference
+    main.restock_orders[:] = []
+    yield
+    main.restock_orders[:] = []
 
 
 @pytest.fixture
